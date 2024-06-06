@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfileViewController">
+   <children>
+      <VBox fx:id="vbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="30.0">
+         <children>
+            <Label fx:id="profileLabel" alignment="TOP_CENTER" prefHeight="58.0" prefWidth="462.0" text="Profile" textFill="#114232">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" size="150" textAlignment="CENTER" wrappingWidth="230.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.9478672985781991" startX="0.5876777251184834" startY="0.36492890995260663">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1325536072254181" green="0.44736841320991516" blue="0.34243014454841614" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </FontAwesomeIconView>
+            <HBox>
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="47.0" prefWidth="237.0" text="Full Name :">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fullNamelabel" prefHeight="36.0" prefWidth="274.0" text="Full Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="61.0" prefWidth="239.0" text="User Name :">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userNameLabel" prefHeight="47.0" prefWidth="280.0" text="User Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="600.0" spacing="7.0">
+               <children>
+                  <JFXButton fx:id="editProfileBTN" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#onEditProfileHandler" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #114232;" text="Edit Profile" textFill="#fffefe">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="editPassBTN" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#onEditPassHandler" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #114232;" text="Edit Password" textFill="#fffefe">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="vbox1" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="665.0" text="Edit Profile" textFill="#114232">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="fullNameTF" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Enter Your Full Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="userNameTf" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Enter User Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="98.0" prefWidth="800.0" spacing="7.0">
+               <children>
+                  <JFXButton fx:id="cancelBTN" onAction="#onCancelHandler" prefWidth="150.0" style="-fx-background-color: #114232;" text="Cancel" textFill="#ffecec">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="saveBTN" onAction="#onSaveHandler" prefWidth="150.0" style="-fx-background-color: #114232;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="vbox2" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="665.0" text="Edit Password" textFill="#114232">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="fullNameTF1" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Enter Your Old Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="userNameTf1" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Enter New Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="confirmTF1" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Confirm Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="98.0" prefWidth="800.0" spacing="7.0">
+               <children>
+                  <JFXButton fx:id="cancelBTN1" onAction="#onCancelHandler1" prefWidth="150.0" style="-fx-background-color: #114232;" text="Cancel" textFill="#ffecec">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="saveBTN1" onAction="#onSaveHandler1" prefWidth="150.0" style="-fx-background-color: #114232;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateProjectController">
+   <children>
+      <VBox fx:id="vBox" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" spacing="30.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="68.0" prefWidth="813.0" style="-fx-background-color: #114232;" text="Create Project" textFill="WHITE">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="projectNameTF" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="43.0" prefWidth="412.0" promptText="Enter Project Name" style="-fx-background-color: Transparent; -fx-border-width: 0px 0px 0px 0px; -fx-border-color: black;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <JFXButton fx:id="createBTN" onAction="#onCreateHandler" prefHeight="49.0" prefWidth="416.0" style="-fx-background-color: #114232;" text="Create Project" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>
